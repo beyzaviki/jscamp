@@ -90,8 +90,8 @@ let [icAnadolu,marmara,karadeniz,[icAnadolusehirleri]] = [
         ["sinop","trabzon"],
     ]
 ]
-//console.log(icAnadolu.name)
-//console.log(icAnadolu.population)
+console.log(icAnadolu.name)
+console.log(icAnadolu.population)
 console.log(icAnadolusehirleri)
 
 let newproductName, newunitPrice, newquantity
