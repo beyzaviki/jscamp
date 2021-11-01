@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 console.log("merhaba kodlama.io")
 
 let dolarDun = 9.20
@@ -26,7 +26,7 @@ console.log("</ul>")
     <li>emlak konut kredisi</li>
     <li>kamu konut kredisi</li>
     </ul> */}
-=======
+
 console.log("Merhaba Kodlama.io")
 
 //JS type safe değildir
@@ -62,5 +62,5 @@ console.log("</ul>")
     <li>Kamu Konut Kredisi</li>
 </ul> */}
 
->>>>>>> 913ee0044458ba0401b6785ff179f907b3fb0c1e
+
 console.log(konutKredileri)
