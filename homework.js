@@ -27,42 +27,27 @@ function isPrime(...nums){
 isPrime(1,2,3,4,5,6,7,8,9,10,11,12,13)
 
 //parametre olarak girilen iki sayının arkadaş sayı olup olmadığını bulma
-const divisorsOfNumber = (number) => {
-    const divisors = [];
-    for (var i = 1; i < number; i++) {
-      if (number % i === 0) {
-        divisors.push(i);
-      }
-    }
-    return divisors;
-  };
-  
-  const sumOfItsDivisors = (...divisors) => {
-    let total = 0;
-    divisors.forEach((divisor) => {
-      total += divisor;
-    });
-    return total;
-  };
-  
-  const checkNumbersIsFriend = (numberOne, numberTwo) => {
-    let result = false;
-    if (numberOne !== numberTwo) {
-      const sumDivisiorsOfNumberOne = sumOfItsDivisors(
-        ...divisorsOfNumber(numberOne)
-      );
-      const sumDivisiorsOfNumberTwo = sumOfItsDivisors(
-        ...divisorsOfNumber(numberTwo)
-      );
-      if (
-        sumDivisiorsOfNumberOne === numberTwo &&
-        sumDivisiorsOfNumberTwo === numberOne
-      ) {
-        result = true;
-      }
-    }
-    return result;
-  };
+function isFriend(num1, num2){
+  let sum1 = 0;
+  let sum2 = 0;
+  for(let i=1; i< num1; i++){
+    if(num1 % i == 0){
+      sum1 += i;
+     } 
+  }
+  for(let i=1; i< num2; i++){
+    if(num2 % i == 0){
+      sum2 += i;
+     } 
+  }
+  if(sum2 == num1 && sum1 == num2)
+    return('Bunlar Arkadaştır :)')
+  else
+    return('Bunlar Arkadaş falan değiller!')
+
+}
+
+console.log(isFriend(221, 284))
 
   //1000'e kadarki tüm mükemmel sayıları listeleyen
 for(let sayi = 1;sayi <= 1000; sayi++){
