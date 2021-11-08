@@ -1,14 +1,19 @@
-//1000'e kadarki tüm mükemmel sayıları listeleyen
-for(let sayi = 1;sayi <= 1000; sayi++){
-    let kalan = 0;
-
-    for (let i = 1; i <= sayi/2; i++){
-        if (sayi % i == 0){
-            kalan += i;
-        }
+const checkNumbersIsFriend = (numberOne, numberTwo) => {
+    let result = false;
+    if (numberOne !== numberTwo) {
+      const sumDivisiorsOfNumberOne = sumOfItsDivisors(
+        ...divisorsOfNumber(numberOne)
+      );
+      const sumDivisiorsOfNumberTwo = sumOfItsDivisors(
+        ...divisorsOfNumber(numberTwo)
+      );
+      if (
+        sumDivisiorsOfNumberOne === numberTwo &&
+        sumDivisiorsOfNumberTwo === numberOne
+      ) {
+        result = true;
+      }
     }
-
-    if (kalan == sayi){
-        console.log("%d bu rakam mükemmel sayı\n", sayi);
-    }
-}
+    return result;
+  };
+  
